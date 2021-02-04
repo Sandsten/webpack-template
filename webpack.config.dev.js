@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require("html-webpack-plugin");
 const ErrorOverlayPlugin = require("error-overlay-webpack-plugin");
 
 module.exports = {
+  mode: "development",
   target: "web",
   entry: {
     app: "./src/index.js",
@@ -12,18 +13,17 @@ module.exports = {
     filename: "[name].js",
     publicPath: "/",
   },
-  watch: true,
   devServer: {
-    host: "0.0.0.0", // Required for working inside a docker container
-    port: 3001,
+    host: "0.0.0.0", // Required if you want to work inside docker containers
+    port: 8080,
     historyApiFallback: true, // 404 responses will fall back to index.html. Required for using react-router-dom
     // disableHostCheck: true // Might have to be enabled in order to run dev server in docker container
 
     // watchOptions required in order for webpack to rebuild when used inside a docker container
-    watchOptions: {
-      aggregateTimeout: 500, // Delay before rebuilding once a file has changed
-      poll: 1000, // Check for changes every second
-    },
+    // watchOptions: {
+    //   aggregateTimeout: 500, // Delay before rebuilding once a file has changed
+    //   poll: 1000, // Check for changes every second
+    // },
   },
   devtool: "inline-source-map", // Remove this when in production, takes alot of space!
   module: {
