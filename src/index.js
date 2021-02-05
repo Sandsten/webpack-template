@@ -1,6 +1,6 @@
-var root = document.getElementById("root");
+var root = document.getElementById('root');
 
-var button = document.createElement("button");
-button.innerText = "POTATOS";
+var button = document.createElement('button');
+button.innerText = 'MAJS1';
 
 root.appendChild(button);

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "webpack serve --config webpack.config.dev.js"
+    "dev": "webpack serve --config webpack.config.dev.js",
+    "docker": "docker-compose -f docker-compose.dev.yml up --build"
   },
   "keywords": [],
   "author": "Staffan Sandberg",
