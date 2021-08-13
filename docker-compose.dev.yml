@@ -4,8 +4,10 @@ services:
   webapp:
     build:
       context: .
+    image: sandsten/vrexperiment-frontend:dev
+    container_name: vrexperiment_frontend
     ports:
-      - 8080:8080
+      - 3001:3001
     volumes:
       - ./src:/app/src # Create a bind mount to monitor changes inside /src
     environment:

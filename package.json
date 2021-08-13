@@ -1,35 +1,31 @@
 {
-  "name": "client",
+  "name": "vrexperiment",
   "version": "1.0.0",
   "description": "",
   "main": "index.html",
   "scripts": {
     "dev": "webpack serve --config webpack.config.dev.js",
-    "docker": "docker-compose -f docker-compose.dev.yml up --build"
+    "docker": "docker-compose -f docker-compose.dev.yml up --build --remove-orphans"
   },
   "keywords": [],
   "author": "Staffan Sandberg",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.12.13",
-    "@babel/plugin-proposal-class-properties": "^7.12.13",
-    "@babel/preset-env": "^7.12.13",
     "@webpack-cli/serve": "^1.3.0",
-    "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.0.1",
-    "error-overlay-webpack-plugin": "^0.4.2",
+    "css-loader": "^6.2.0",
     "file-loader": "^6.2.0",
-    "html-loader": "^1.3.2",
+    "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.0.0",
-    "mini-css-extract-plugin": "^1.3.5",
-    "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1",
-    "style-loader": "^2.0.0",
+    "mini-css-extract-plugin": "^2.2.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.5",
+    "typescript": "^4.3.5",
     "webpack": "^5.20.2",
     "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2",
     "webpack-glsl-loader": "^1.0.1"
-  },
-  "dependencies": {}
+  }
 }
