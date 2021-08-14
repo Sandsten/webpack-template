@@ -9,6 +9,7 @@ module.exports = {
 	devServer: {
 		host: '0.0.0.0', // Required for working inside a docker container
 		port: 3001,
+    overlay: true,
 		historyApiFallback: true, // 404 responses will fall back to index.html. Required for using react-router-dom
 		// disableHostCheck: true // Might have to be enabled in order to run dev server in docker container
 	},

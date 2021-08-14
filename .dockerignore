@@ -1,3 +1,7 @@
 .git
 .cache
 **/node_modules
+README.md
+.prettierrc
+.gitignore
+.dockerignore
